@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/index.css" />
+    <title>sepium</title>
+  </head>
+  <body>
+    <ul class="cardList">
+      <li class="cardList__item productCard">
+          <div class="f-carousel" id="myCarousel">
+            <div class="f-carousel__slide">
+              <a
+                href="productImage.jpg"
+                class="productCard__imageWrapper f-carousel__slide"
+                data-fancybox="gallery"
+              >
+                <img
+                  class="productCard__image"
+                  src="productImage.jpg"
+                  alt="product image #1"
+                />
+              </a>
+            </div>
+            <div class="f-carousel__slide">
+              <a
+                href="productImage.jpg"
+                class="productCard__imageWrapper"
+                data-fancybox="gallery"
+              >
+                <img
+                  class="productCard__image"
+                  src="productImage.jpg"
+                  alt="product image #2"
+                />
+              </a>
+            </div>
+            <div class="f-carousel__slide">
+              <a
+                href="productImage.jpg"
+                class="productCard__imageWrapper"
+                data-fancybox="gallery"
+              >
+                <img
+                  class="productCard__image"
+                  src="productImage.jpg"
+                  alt="product image #3"
+                />
+              </a>
+            </div>
+            <div class="f-carousel__slide">
+              <a
+                href="productImage.jpg"
+                class="productCard__imageWrapper"
+                data-fancybox="gallery"
+              >
+                <img
+                  class="productCard__image"
+                  src="productImage.jpg"
+                  alt="product image #4"
+                />
+              </a>
+            </div>
+            <div class="f-carousel__slide">
+              <a
+                href="productImage.jpg"
+                class="productCard__imageWrapper"
+                data-fancybox="gallery"
+              >
+                <img
+                  class="productCard__image"
+                  src="productImage.jpg"
+                  alt="product image #5"
+                />
+              </a>
+            </div>
+            <div class="f-carousel__slide">
+              <a
+                href="productImage.jpg"
+                class="productCard__imageWrapper"
+                data-fancybox="gallery"
+              >
+                <img
+                  class="productCard__image"
+                  src="productImage.jpg"
+                  alt="product image #6"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="productCard__info">
+            <p class="productCard__article">
+              <span>Артикул</span>
+              <span>—</span>
+              <span>4607</span>
+            </p>
+            <h3 class="productCard__title">
+              Угловая бежевая кухня на заказ с матовыми фасадами в современном
+              стиле «Нарцисс»
+            </h3>
+          </div>
+          <div class="productCard__materials">
+            <p class="productCard__label">Варианты материалов</p>
+            <form class="productCard__form" action="">
+              <div class="productCard__option">
+                <input
+                  class="display_none"
+                  type="radio"
+                  id="PVC"
+                  name="material"
+                  value="ПВХ"
+                  checked
+                />
+                <label for="PVC">
+                  <svg width="18" height="18">
+                    <use href="./icon.svg#checked"></use>
+                  </svg>
+                  <span> ПВХ </span>
+                </label>
+              </div>
+              <div class="productCard__option">
+                <input
+                  class="display_none"
+                  type="radio"
+                  id="enamel"
+                  name="material"
+                  value="Эмаль"
+                />
+                <label for="enamel">
+                  <svg width="18" height="18">
+                    <use href="./icon.svg#checked"></use>
+                  </svg>
+                  <span> Эмаль </span>
+                </label>
+              </div>
+              <div class="productCard__option">
+                <input
+                  class="display_none"
+                  type="radio"
+                  id="plastic"
+                  name="material"
+                  value="Пластик"
+                />
+                <label for="plastic">
+                  <svg width="18" height="18">
+                    <use href="./icon.svg#checked"></use>
+                  </svg>
+                  <span> Пластик </span>
+                </label>
+              </div>
+              <div class="productCard__option">
+                <input
+                  class="display_none"
+                  type="radio"
+                  id="array"
+                  name="material"
+                  value="Массив"
+                />
+                <label for="array">
+                  <svg width="18" height="18">
+                    <use href="./icon.svg#checked"></use>
+                  </svg>
+                  <span> Массив </span>
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="productCard__priceBlock">
+            <div class="productCard__priceInfo">
+              <p class="productCard__priceCaption">Цена от</p>
+              <p class="productCard__priceValue">515 700 ₽</p>
+              <div class="productCard__priceMeter">
+                <span>Погонный метр от</span><span>—</span
+                ><span>30 000 ₽ </span>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="productCard__btnOrder"
+              aria-label="Заказать"
+            >
+              Заказать
+            </button>
+          </div>
+          <div class="productCard__footer">
+            <div class="productCard__like">
+              <input type="checkbox" id="like" class="display_none" />
+              <label for="like">
+                <svg width="22" height="22">
+                  <use href="./icon.svg#like"></use>
+                </svg>
+                <span> 57 </span>
+              </label>
+            </div>
+            <div class="productCard__calc">
+              <a href="/calc" target="_blank"
+                ><span> Рассчитать стоимость </span>
+                <svg width="12" height="12">
+                  <use href="./icon.svg#arrow2"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+      </li>
+    </ul>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+:root {
+	--color-courusel-arrow-bg: rgb(255 255 255 / 0.5);
+	--color-grayscale-0: rgb(255 255 255 / 1);
+	--color-grayscale-100: rgb(246 246 246 / 1);
+	--color-grayscale-200: rgb(230 230 230 / 1);
+	--color-grayscale-300: rgb(161 165 173 / 1);
+	--color-grayscale-400: rgb(101 101 101 / 1);
+	--color-grayscale-500: rgb(70 70 70 / 1);
+	--color-grayscale-600: rgb(50 49 47 / 1);
+	--color-orange-200: rgb(255 92 0 / 1);
+
+	--shadow-card: 0 0 20px 0 rgb(0 0 0 / 0.15);
+	--shadow-hover: 0 0 20px 0 rgb(0 0 0 / 0.3);
+}
+
+.f-carousel {
+	--f-carousel-slide-width: 100%;
+	--f-carousel-slide-bg: #eee;
+
+	--f-carousel-dots-height: 12px;
+	--f-carousel-dots-top: calc(100%);
+	--f-carousel-dots-gap: 0.3125rem;
+
+	--f-arrow-pos: 0.9375rem;
+	--f-arrow-width: 2.6875rem;
+	--f-arrow-height: 2.6875rem;
+	--f-arrow-border-radius: 50%;
+	--f-arrow-bg: var(--color-courusel-arrow-bg);
+
+	--f-arrow-svg-width: 1.1875rem;
+	--f-arrow-svg-height: 1.1875rem;
+}
