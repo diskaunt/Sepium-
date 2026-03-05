@@ -32,12 +32,9 @@ function renderCards() {
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = cardTemplateHTML;
     const card = tempDiv.firstElementChild as HTMLElement;
-
-    // Делаем уникальными все input и картинки
     const inputs = card.querySelectorAll('input');
     const imgs = card.querySelectorAll('.productCard__imageWrapper');
-
-    // изначально не использовал fancibox, использовал toolbar карусели (решил что так добавить кнопку будет удобнее)
+    const carousel = card.querySelector('.f-carousel');
 
     imgs.forEach((img: any) => {
       const oldDataset = img.dataset.fancybox;
@@ -50,16 +47,13 @@ function renderCards() {
       const newId = `${oldId}-${i}`;
       input.id = newId;
       input.name = `material-${i}`;
-
       card.querySelector(`label[for="${oldId}"]`)?.setAttribute('for', newId);
     });
-
-    const carousel = card.querySelector('.f-carousel');
 
     // добавляем кнопку, вешаем нажатие с открытием fancybox
     if (carousel) {
       carousel.id = `carousel-${i}`;
-      carousel.innerHTML = carousel.innerHTML + btn;
+      carousel.innerHTML += btn;
       const button = carousel.querySelector('[data-expand-action="toggle"]');
 
       button?.addEventListener('click', (e) => {
@@ -75,16 +69,30 @@ function renderCards() {
       });
     }
 
+    // обработчик для лайков
+    const likeInput = card.querySelector<HTMLInputElement>('input[id^="like"]');
+    const likeCountSpan = card.querySelector<HTMLElement>(
+      '.productCard__like span',
+    );
+
+    if (likeInput && likeCountSpan) {
+      const initialValue = parseInt(likeCountSpan.textContent || '0', 10);
+
+      likeInput.addEventListener('change', () => {
+        if (likeInput.checked) {
+          likeCountSpan.textContent = (initialValue + 1).toString();
+        } else {
+          likeCountSpan.textContent = initialValue.toString();
+        }
+      });
+    }
+
+    // обработчик для открытия карточки в новом окне
     card.addEventListener('click', (event: MouseEvent) => {
       const target = event.target as HTMLElement;
 
       const isInteractive = target.closest(
-        'button, ' +
-          'input, ' +
-          'label, ' +
-          '.f-carousel__slide, ' +
-          'a, ' +
-          '.carousel__button',
+        'button, input, label, .f-carousel__slide, a, .carousel__button',
       );
 
       if (!isInteractive) {
