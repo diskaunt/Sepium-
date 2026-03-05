@@ -60,12 +60,12 @@ function renderCards() {
       button?.addEventListener('click', (e) => {
         e.preventDefault();
         Fancybox.show([
-          { src: '/productImage.jpg', type: 'image' },
-          { src: '/productImage.jpg', type: 'image' },
-          { src: '/productImage.jpg', type: 'image' },
-          { src: '/productImage.jpg', type: 'image' },
-          { src: '/productImage.jpg', type: 'image' },
-          { src: '/productImage.jpg', type: 'image' },
+          { src: `${BASE_URL}/productImage.jpg`, type: 'image' },
+          { src: `${BASE_URL}/productImage.jpg`, type: 'image' },
+          { src: `${BASE_URL}/productImage.jpg`, type: 'image' },
+          { src: `${BASE_URL}/productImage.jpg`, type: 'image' },
+          { src: `${BASE_URL}/productImage.jpg`, type: 'image' },
+          { src: `${BASE_URL}/productImage.jpg`, type: 'image' },
         ]);
       });
     }
