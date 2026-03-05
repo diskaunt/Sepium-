@@ -14,8 +14,9 @@ import { Fancybox } from '@fancyapps/ui';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
 // путь к иконке
-const vector = '/Sepium-/public/icon.svg#vector';
-const arrow = '/Sepium-/public/icon.svg#arrow';
+const BASE_URL = import.meta.env.BASE_URL;
+const vector = `${BASE_URL}/icon.svg#vector`;
+const arrow = `${BASE_URL}/icon.svg#arrow`;
 
 // функция для рендеринга карточек (проблема в input type="radio" и checkbox, картинках для fancybox)
 function renderCards() {
